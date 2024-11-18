@@ -11,13 +11,13 @@ type NavBarProps = {
 const StyledNavBar = styled.nav`
     display: flex;
     flex-direction: row;
+    margin-right: 150px;
 `
 
 const StyledList = styled.ul`
     list-style-type: none;
     display:flex;
-    gap: 20px;
-    margin-right:5px;
+    gap: 60px;
     top: 0;
 `
 
