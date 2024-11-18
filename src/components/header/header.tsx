@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import NavBar from "./navbar"
 import styled from "styled-components";
 
@@ -28,7 +29,9 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
     return (
         <StyledHeader>
             <StyledH1>{title}</StyledH1>
-            <NavBar title="navbar"></NavBar>
+            <Router>
+                <NavBar title="navbar" />
+            </Router>
         </StyledHeader>
     );
 };

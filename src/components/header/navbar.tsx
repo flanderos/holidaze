@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Routes, Route, Link, Outlet } from "react-router-dom"
 
 
 
@@ -21,18 +22,21 @@ const StyledList = styled.ul`
     top: 0;
 `
 
+const StyledLink = styled(Link)`
+    color: black;
+    text-decoration: none;
+`
+
 const NavBar: React.FC<NavBarProps> = ({ title, subtitle }) => {
     return (
-
         <StyledNavBar>
             <StyledList>
-                <li>Home</li>
-                <li>Venues</li>
-                <li>Bookings</li>
-                <li>Log in</li>
+                <StyledLink to="/">Home</StyledLink>
+                <StyledLink to="/venues">Venues</StyledLink>
+                <StyledLink to="/bookings">Bookings</StyledLink>
+                <StyledLink to="/login">Log in</StyledLink>
             </StyledList>
-        </StyledNavBar>
-
+        </StyledNavBar >
     );
 };
 
