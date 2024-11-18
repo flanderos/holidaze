@@ -23,6 +23,14 @@ const StyledList = styled.ul`
 const StyledLink = styled(Link)`
     color: black;
     text-decoration: none;
+    padding: 5px;
+    transition: 0.3s;
+    border-radius: 5px;
+        
+        &:hover {
+        color: var(--color-primary);
+        background-color: var(--color-black);
+}        
 `
 
 const NavBar: React.FC<NavBarProps> = () => {

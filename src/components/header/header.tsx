@@ -4,28 +4,47 @@ import styled from "styled-components";
 
 interface HeaderProps {
     title: string;
+    box: string;
 }
 
 const StyledHeader = styled.header`
-  background-color: #ffd446;
+  background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 13px 0px;
   position: fixed;
   width: 100%;
   padding: 10px 20px;
+  
 `;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+`
 
 const StyledH1 = styled.h1`
   font-family: "Michroma";
   margin-left: 150px;
 `;
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const StyledSubtitle = styled.h2`
+    font-size: 20px;
+    margin-left: 150px;
+    font-family: "Edu AU VIC WA NT Hand";
+    font-weight: 400;
+`
+
+const Header: React.FC<HeaderProps> = ({ title, box }) => {
     return (
         <StyledHeader>
-            <StyledH1>{title}</StyledH1>
+            <Container>
+                <StyledH1>{title}</StyledH1>
+                <StyledSubtitle>Your Journey Starts Here</StyledSubtitle>
+            </Container>
             <NavBar />
         </StyledHeader>
     );
