@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/header/header";
 import { Fonts } from "./styles/fonts";
 import { Colors } from "./styles/_colors";
+import SubHeader from "./components/subheader"
 
 const App: React.FC = () => {
   return (
@@ -12,10 +13,7 @@ const App: React.FC = () => {
       <div className="App">
         <Colors />
         <Header title="Holidaze" />
-        <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
-          <Route path="/about" element={<div>About Page</div>} />
-        </Routes>
+        <SubHeader />
       </div>
     </Router>
   );
