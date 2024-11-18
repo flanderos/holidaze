@@ -5,8 +5,7 @@ import { Routes, Route, Link, Outlet } from "react-router-dom"
 
 
 type NavBarProps = {
-    title: string;
-    subtitle?: string;
+
 };
 
 const StyledNavBar = styled.nav`
@@ -19,7 +18,6 @@ const StyledList = styled.ul`
     list-style-type: none;
     display:flex;
     gap: 60px;
-    top: 0;
 `
 
 const StyledLink = styled(Link)`
@@ -27,7 +25,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `
 
-const NavBar: React.FC<NavBarProps> = ({ title, subtitle }) => {
+const NavBar: React.FC<NavBarProps> = () => {
     return (
         <StyledNavBar>
             <StyledList>
@@ -36,7 +34,7 @@ const NavBar: React.FC<NavBarProps> = ({ title, subtitle }) => {
                 <StyledLink to="/bookings">Bookings</StyledLink>
                 <StyledLink to="/login">Log in</StyledLink>
             </StyledList>
-        </StyledNavBar >
+        </StyledNavBar>
     );
 };
 
