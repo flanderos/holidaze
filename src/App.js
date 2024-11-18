@@ -1,12 +1,15 @@
-import logo from './logo.svg'
 import './App.css'
 import Header from "./components/header/header.tsx"
+import { Fonts } from "./styles/fonts"
 
 function App() {
   return (
-    <div className="App">
-      <Header title="Holidaze"></Header>
-    </div>
+    <>
+      <Fonts />
+      <div className="App">
+        <Header title="Holidaze" />
+      </div>
+    </>
   )
 }
 
