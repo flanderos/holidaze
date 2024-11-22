@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/header/header";
 import { Fonts } from "./styles/fonts";
 import { Colors } from "./styles/_colors";
-import SubHeader from "./components/subheader"
+import HeroSection from "./components/heroimage";
 
 const App: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <div className="App">
         <Colors />
         <Header title="Holidaze" />
-        <SubHeader />
+        <HeroSection />
       </div>
     </Router>
   );
