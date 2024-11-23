@@ -7,7 +7,7 @@ interface HeroSectionProps {
 }
 
 const StyledHeroImage = styled.section `
-    margin-top: 400px;
+    /* margin-top: 100px; */
     background-image: url(${HeroImage});
      background-size: cover;
     background-position: center; 
@@ -34,6 +34,24 @@ const StyledH1 = styled.h1`
     margin: 0;
 `
 
+const StyledCtaButton = styled.button`
+    height: 50px;
+    width: 250px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid white;
+    font-family: 'Michroma', sans-serif;
+    transition: 0.6s;
+
+    &:hover {
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 13px 0px;
+    
+    }
+
+`
+
 const HeroSection: React.FC<HeroSectionProps> = ({  }) => {
     return (
         <div>
@@ -41,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({  }) => {
         <TextContainer>
             <StyledH1>Your Journey Starts Here</StyledH1>
             <p>Renting an arena for an event is like buying a mansion for a sleepover—way too big, but hey, at least there’s space for the pizza.</p>
-            <h5>Albert Einstein</h5>
+            <StyledCtaButton>See our venues</StyledCtaButton>
         </TextContainer>
         </StyledHeroImage>
         </div>
